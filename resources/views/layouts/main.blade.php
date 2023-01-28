@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Lingua project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/bootstrap4/bootstrap.min.css')}}">
+    <link href="{{asset('assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/responsive.css')}}">
 </head>
 <body>
 
@@ -181,7 +181,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Ukrainian.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Ukrainian.svg')}}" alt=""></div>
                                     <div class="lang_name">Ukrainian</div>
                                 </a>
                             </div>
@@ -189,7 +189,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Japanese.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Japanese.svg')}}" alt=""></div>
                                     <div class="lang_name">Japanese</div>
                                 </a>
                             </div>
@@ -197,7 +197,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Lithuanian.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Lithuanian.svg')}}" alt=""></div>
                                     <div class="lang_name">Lithuanian</div>
                                 </a>
                             </div>
@@ -205,7 +205,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Swedish.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Swedish.svg')}}" alt=""></div>
                                     <div class="lang_name">Swedish</div>
                                 </a>
                             </div>
@@ -213,7 +213,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/English.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/English.svg')}}" alt=""></div>
                                     <div class="lang_name">English</div>
                                 </a>
                             </div>
@@ -221,7 +221,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Italian.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Italian.svg')}}" alt=""></div>
                                     <div class="lang_name">Italian</div>
                                 </a>
                             </div>
@@ -229,7 +229,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/Chinese.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/Chinese.svg')}}" alt=""></div>
                                     <div class="lang_name">Chinese</div>
                                 </a>
                             </div>
@@ -237,7 +237,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/French.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/French.svg')}}" alt=""></div>
                                     <div class="lang_name">French</div>
                                 </a>
                             </div>
@@ -245,7 +245,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="images/German.svg" alt=""></div>
+                                    <div class="flag"><img src="{{asset('assets/images/German.svg')}}" alt=""></div>
                                     <div class="lang_name">German</div>
                                 </a>
                             </div>
@@ -275,7 +275,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="images/course_1.jpg" alt=""></div>
+                        <div class="course_image"><img src="{{asset('assets/images/course_1.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -299,7 +299,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="images/course_2.jpg" alt=""></div>
+                        <div class="course_image"><img src="{{asset('assets/images/course_2.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -323,7 +323,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="images/course_3.jpg" alt=""></div>
+                        <div class="course_image"><img src="{{asset('assets/images/course_3.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -351,7 +351,7 @@
     <!-- Instructors -->
 
     <div class="instructors">
-        <div class="instructors_background" style="background-image:url(images/instructors_background.png)"></div>
+        <div class="instructors_background" style="background-image:url({{asset('assets/images/instructors_background.png')}})"></div>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -364,7 +364,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="images/instructor_1.jpg" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_1.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -385,7 +385,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="images/instructor_2.jpg" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_2.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -406,7 +406,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="images/instructor_3.jpg" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_3.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -496,7 +496,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="images/event_1.jpg" alt=""></div>
+                        <div class="event_image"><img src="{{asset('assets/images/event_1.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -511,7 +511,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="images/event_2.jpg" alt=""></div>
+                        <div class="event_image"><img src="{{asset('assets/images/event_2.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -526,7 +526,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="images/event_3.jpg" alt=""></div>
+                        <div class="event_image"><img src="{{asset('assets/images/event_3.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -635,11 +635,11 @@
     </footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('assets/styles/bootstrap4/popper.js')}}"></script>
+<script src="{{asset('assets/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('assets/plugins/easing/easing.js')}}"></script>
+<script src="{{asset('assets/js/custom.js')}}"></script>
 </body>
 </html>
