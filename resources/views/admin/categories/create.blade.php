@@ -183,7 +183,7 @@
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
 
-                                Категории
+                                Добвление категории
                             </p>
                         </a>
                     </li>
@@ -226,7 +226,7 @@
                 <!-- Main row -->
                 <div class="row">
                     <div class="col-12">
-                        <a href=" {{route('admin.category.create')}}" class="btn btn-block btn-primary">Добавить</a>
+                        <a href="{{route(admin.category.create)}}" class="btn btn-block btn-primary">Добавить</a>
                     </div>
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
                     <section class="col-lg-5 connectedSortable">

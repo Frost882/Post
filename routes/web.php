@@ -17,6 +17,10 @@ Route::group(['namespace' => 'Main'], function () {
     Route::get('/', 'IndexController');
 });
 
+Route::group(['namespace' => 'Main'], function () {
+    Route::get('/blog', 'BlogController');
+});
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController');
@@ -25,7 +29,13 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::group(['namespace' => 'Category' , 'prefix' => 'categories'], function () {
-        Route::get('/', 'IndexController');
+        Route::get('/', 'IndexController')->name('category.index');
+    });
+});
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Category' , 'prefix' => 'categories'], function () {
+        Route::get('/create', 'CreateController')->name('admin.category.create');
     });
 });
 
