@@ -14,11 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'Main'], function () {
-    Route::get('/', 'IndexController');
+    Route::get('/', 'IndexController')->name('main.index');
 });
 
-Route::group(['namespace' => 'Main'], function () {
-    Route::get('/blog', 'BlogController');
+Route::group(['namespace' => 'Main', 'prefix' => 'main'], function () {
+        Route::get('/blog', 'BlogController')->name('main.blog');
+    });
+
+Route::group(['namespace' => 'Main', 'prefix' => 'main'], function () {
+    Route::get('/contact', 'ContactController')->name('main.contact');
+});
+
+Route::group(['namespace' => 'Main', 'prefix' => 'main'], function () {
+    Route::get('/instructors', 'InstructorsController')->name('main.instructors');
+
+});
+
+    Route::group(['namespace' => 'Main', 'prefix' => 'main'], function () {
+        Route::get('/courses', 'CoursesController')->name('main.courses');
+
 });
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {

@@ -6,98 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Lingua project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/bootstrap4/bootstrap.min.css')}}">
-    <link href="{{asset('assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/OwlCarousel2-2.2.1/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/main_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/styles/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/bootstrap4/bootstrap.min.css')}}">
+    <link href="{{asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/responsive.css')}}">
 </head>
 <body>
 
 <div class="super_container">
 
-    <!-- Header -->
-
-    <header class="header">
-
-        <!-- Top Bar -->
-        <div class="top_bar">
-            <div class="top_bar_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-                                <div class="top_bar_phone"><span class="top_bar_title">phone:</span>+44 300 303 0266</div>
-                                <div class="top_bar_right ml-auto">
-
-                                    <!-- Language -->
-                                    <div class="top_bar_lang">
-                                        <span class="top_bar_title">site language:</span>
-                                        <ul class="lang_list">
-                                            <li class="hassubs">
-                                                <a href="#">English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                                <ul>
-                                                    <li><a href="#">Ukrainian</a></li>
-                                                    <li><a href="#">Japanese</a></li>
-                                                    <li><a href="#">Lithuanian</a></li>
-                                                    <li><a href="#">Swedish</a></li>
-                                                    <li><a href="#">Italian</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Social -->
-                                    <div class="top_bar_social">
-                                        <span class="top_bar_title social_title">follow us</span>
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Header Content -->
-        <div class="header_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                            <div class="logo_container mr-auto">
-                                <a href="#">
-                                    <div class="logo_text">Lingua</div>
-                                </a>
-                            </div>
-                            <nav class="main_nav_contaner">
-                                <ul class="main_nav">
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="courses.html">Courses</a></li>
-                                    <li><a href="instructors.html">Instructors</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <div class="header_content_right ml-auto text-right">
-                                <div class="header_search">
-                                    <div class="search_form_container">
-                                        <form action="#" id="search_form" class="search_form trans_400">
-                                            <input type="search" class="header_search_input trans_400" placeholder="Type for Search" required="required">
-                                            <div class="search_button">
-                                                <i class="fa fa-search" aria-hidden="true"></i>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+@include('layouts.header');
 
                                 <!-- Hamburger -->
 
@@ -181,7 +102,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Ukrainian.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Ukrainian.svg')}}" alt=""></div>
                                     <div class="lang_name">Ukrainian</div>
                                 </a>
                             </div>
@@ -189,7 +110,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Japanese.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Japanese.svg')}}" alt=""></div>
                                     <div class="lang_name">Japanese</div>
                                 </a>
                             </div>
@@ -197,7 +118,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Lithuanian.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Lithuanian.svg')}}" alt=""></div>
                                     <div class="lang_name">Lithuanian</div>
                                 </a>
                             </div>
@@ -205,7 +126,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Swedish.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Swedish.svg')}}" alt=""></div>
                                     <div class="lang_name">Swedish</div>
                                 </a>
                             </div>
@@ -213,7 +134,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/English.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/English.svg')}}" alt=""></div>
                                     <div class="lang_name">English</div>
                                 </a>
                             </div>
@@ -221,7 +142,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Italian.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Italian.svg')}}" alt=""></div>
                                     <div class="lang_name">Italian</div>
                                 </a>
                             </div>
@@ -229,7 +150,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/Chinese.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/Chinese.svg')}}" alt=""></div>
                                     <div class="lang_name">Chinese</div>
                                 </a>
                             </div>
@@ -237,7 +158,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/French.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/French.svg')}}" alt=""></div>
                                     <div class="lang_name">French</div>
                                 </a>
                             </div>
@@ -245,7 +166,7 @@
                             <!-- Flag -->
                             <div class="owl-item language_item">
                                 <a href="#">
-                                    <div class="flag"><img src="{{asset('assets/images/German.svg')}}" alt=""></div>
+                                    <div class="flag"><img src="{{asset('images/German.svg')}}" alt=""></div>
                                     <div class="lang_name">German</div>
                                 </a>
                             </div>
@@ -275,7 +196,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="{{asset('assets/images/course_1.jpg')}}" alt=""></div>
+                        <div class="course_image"><img src="{{asset('images/course_1.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -299,7 +220,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="{{asset('assets/images/course_2.jpg')}}" alt=""></div>
+                        <div class="course_image"><img src="{{asset('images/course_2.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -323,7 +244,7 @@
                 <!-- Course -->
                 <div class="col-lg-4 course_col">
                     <div class="course">
-                        <div class="course_image"><img src="{{asset('assets/images/course_3.jpg')}}" alt=""></div>
+                        <div class="course_image"><img src="{{asset('images/course_3.jpg')}}" alt=""></div>
                         <div class="course_body">
                             <div class="course_title"><a href="course.html">Vocabulary</a></div>
                             <div class="course_info">
@@ -364,7 +285,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_1.jpg')}}" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('images/instructor_1.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -385,7 +306,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_2.jpg')}}" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('images/instructor_2.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -406,7 +327,7 @@
                 <div class="col-lg-4 instructor_col">
                     <div class="instructor text-center">
                         <div class="instructor_image_container">
-                            <div class="instructor_image"><img src="{{asset('assets/images/instructor_3.jpg')}}" alt=""></div>
+                            <div class="instructor_image"><img src="{{asset('images/instructor_3.jpg')}}" alt=""></div>
                         </div>
                         <div class="instructor_name"><a href="instructors.html">Sarah Parker</a></div>
                         <div class="instructor_title">Teacher</div>
@@ -496,7 +417,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="{{asset('assets/images/event_1.jpg')}}" alt=""></div>
+                        <div class="event_image"><img src="{{asset('images/event_1.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -511,7 +432,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="{{asset('assets/images/event_2.jpg')}}" alt=""></div>
+                        <div class="event_image"><img src="{{asset('images/event_2.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -526,7 +447,7 @@
                 <!-- Event -->
                 <div class="col-lg-4 event_col">
                     <div class="event">
-                        <div class="event_image"><img src="{{asset('assets/images/event_3.jpg')}}" alt=""></div>
+                        <div class="event_image"><img src="{{asset('images/event_3.jpg')}}" alt=""></div>
                         <div class="event_date d-flex flex-column align-items-center justify-content-center">
                             <div class="event_day">26</div>
                             <div class="event_month">aug</div>
@@ -563,7 +484,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('/assets/images/blog_1.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_1.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">travel</div>
                                             </div>
                                         </a>
@@ -573,7 +494,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('assets/images/blog_2.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_2.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">languages</div>
                                             </div>
                                         </a>
@@ -583,7 +504,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('assets/images/blog_3.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_3.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">cultures</div>
                                             </div>
                                         </a>
@@ -593,7 +514,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('assets/images/blog_4.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_4.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">fashion</div>
                                             </div>
                                         </a>
@@ -603,7 +524,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('assets/images/blog_5.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_5.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">cooking</div>
                                             </div>
                                         </a>
@@ -613,7 +534,7 @@
                                     <div class="col-md-4 blog_category_col">
                                         <a href="blog.html">
                                             <div class="blog_category">
-                                                <div class="blog_category_image"><img src="{{asset('assets/images/blog_6.jpg')}}" alt=""></div>
+                                                <div class="blog_category_image"><img src="{{asset('images/blog_6.jpg')}}" alt=""></div>
                                                 <div class="blog_category_title">hobbies</div>
                                             </div>
                                         </a>
@@ -635,7 +556,7 @@
                                 <div class="blog_right_text">
                                     <p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
                                 </div>
-                                <div class="read_more"><a href="blog_single.html">Read More <img src="{{asset('assets/images/right.png')}}" alt=""></a></div>
+                                <div class="read_more"><a href="blog_single.html">Read More <img src="{{asset('images/right.png')}}" alt=""></a></div>
                             </div>
                         </div>
                     </div>
@@ -645,102 +566,13 @@
 
 
 
-<!-- Footer -->
+@include('layouts.footer');
 
-    <footer class="footer">
-        <div class="footer_body">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Newsletter -->
-                    <div class="col-lg-3 footer_col">
-                        <div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
-                            <div class="footer_logo mb-auto"><a href="#">Lingua</a></div>
-                            <div class="footer_title">Subscribe</div>
-                            <form action="#" id="newsletter_form" class="newsletter_form">
-                                <input type="email" class="newsletter_input" placeholder="Email" required="required">
-                                <button class="newsletter_button"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- About -->
-                    <div class="col-lg-2 offset-lg-3 footer_col">
-                        <div>
-                            <div class="footer_title">About Us</div>
-                            <ul class="footer_list">
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Brand Guidelines</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">Advertise with us</a></li>
-                                <li><a href="#">Press</a></li>
-                                <li><a href="#">Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Help & Support -->
-                    <div class="col-lg-2 footer_col">
-                        <div class="footer_title">Help & Support</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Discussions</a></li>
-                            <li><a href="#">Troubleshooting</a></li>
-                            <li><a href="#">Duolingo FAQs</a></li>
-                            <li><a href="#">Schools FAQs</a></li>
-                            <li><a href="#">Duolingo English Test FAQs</a></li>
-                            <li><a href="#">Status</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Privacy -->
-                    <div class="col-lg-2 footer_col clearfix">
-                        <div>
-                            <div class="footer_title">Privacy & Terms</div>
-                            <ul class="footer_list">
-                                <li><a href="#">Community Guidelines</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Brand Guidelines</a></li>
-                                <li><a href="#">Privacy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
-                            <div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-                            <div class="cr_right ml-md-auto">
-                                <div class="footer_phone"><span class="cr_title">phone:</span>+44 300 303 0266</div>
-                                <div class="footer_social">
-                                    <span class="cr_social_title">follow us</span>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{asset('assets/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{asset('assets/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
-<script src="{{asset('assets/plugins/easing/easing.js')}}"></script>
-<script src="{{asset('assets/js/custom.js')}}"></script>
+<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('styles/bootstrap4/popper.js')}}"></script>
+<script src="{{asset('styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('plugins/easing/easing.js')}}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 </body>
 </html>
