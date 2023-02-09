@@ -206,9 +206,6 @@
                     <div class="col-lg-3 col-6">
                 <!-- Main row -->
                 <div class="row">
-                    <div class="col-12">
-                        <a href="{{route('admin.category.create')}}" class="btn btn-block btn-primary">Добавить</a>
-                    </div>
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
                     <section class="col-lg-5 connectedSortable">
                         <br>
@@ -220,21 +217,15 @@
                                     <!-- /.card-header -->
                                     <div class="card-body table-responsive p-0">
                                         <table class="table table-hover text-nowrap">
-                                            <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Название</th>
-                                                <th>Действие</th>
-                                            </tr>
-                                            </thead>
                                             <tbody>
-                                            @foreach($categories as $category)
                                             <tr>
-                                                <td>{{$category->id}}</td>
+                                                <td>ID</td>
                                                 <td>{{$category->title}}</td>
-                                                <td><a href="#"><i class="far fa-eye"></i></a></td>
                                             </tr>
-                                            @endforeach
+                                            <tr>
+                                                <td>Название</td>
+                                                <td>{{$category->title}}</td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
