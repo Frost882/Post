@@ -151,7 +151,7 @@
     </nav>
     <!-- /.navbar -->
 
-<!--Updated upstream:resources/views/admin/categories/index.blade.php-->
+
     @include('admin.layouts.sidebar');
 
     <!-- Main Sidebar Container -->
@@ -174,9 +174,8 @@
                 </div>
             </div>
 
+            @include('admin.layouts.sidebar');
 
-@include('admin.layouts.sidebar');
-<!--Stashed changes:resources/views/admin/category/index.blade.php-->
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -185,7 +184,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">{{$category->title}} <a href="{{route('admin.category.edit', $category->id)}}"><i class="fas fa-pencil-alt"></i></a></h1>
+                        <h1 class="m-0">Редактирование категории</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -206,35 +205,30 @@
                     <div class="col-lg-3 col-6">
                 <!-- Main row -->
                 <div class="row">
-                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-lg-5 connectedSortable">
-                        <br>
-                        <br>
-                        <!--Table-->
-                        <div class="row">
-                            <div>
-                                <div class="card">
-                                    <!-- /.card-header -->
-                                    <div class="card-body table-responsive p-0">
-                                        <table class="table table-hover text-nowrap">
-                                            <tbody>
-                                            <tr>
-                                                <td>ID</td>
-                                                <td>{{$category->id}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Название</td>
-                                                <td>{{$category->title}}</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.card-body -->
+                    <div class="col-12">
+                        <form action="{{route ('admin.category.update', $category->id)}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <input type="text" class="form-control"name="title" placeholder="Название категории"
+                                    value="{{$category->title}}">
+                                    @error('title')
+                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                    @enderror
                                 </div>
-                                <!-- /.card -->
                             </div>
-                        </div>
-                        <!-- end Table -->
+                            <!-- /.card-body -->
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Обновить</button>
+                            </div>
+                        </form>
+
+
+
+
+
 
                         <!-- Control Sidebar -->
                         <aside class="control-sidebar control-sidebar-dark">

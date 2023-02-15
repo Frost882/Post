@@ -65,5 +65,18 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::get('/{category}', 'ShowController')->name('admin.category.show');
     });
 });
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Category' , 'prefix' => 'categories'], function () {
+        Route::get('/{category}/edit', 'EditController')->name('admin.category.edit');
+    });
+});
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Category' , 'prefix' => 'categories'], function () {
+        Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
+    });
+});
+
 Auth::routes();
 
