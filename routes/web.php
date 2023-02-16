@@ -78,5 +78,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     });
 });
 
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Category' , 'prefix' => 'categories'], function () {
+        Route::delete('/{category}', 'DeleteController')->name('admin.category.delete');
+    });
+});
+
 Auth::routes();
 
