@@ -33,6 +33,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item menu-open">
+                    <a href="{{route('tag.index')}}" class="nav-link active">
+                        <i class="fas fa-tags"></i>
+                        <p>
+                            Тэги
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                 </li>
             </ul>
