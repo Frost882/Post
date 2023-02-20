@@ -41,6 +41,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item menu-open">
+                    <a href="{{route('post.index')}}" class="nav-link active">
+                        <i class="far fa-clipboard"></i>
+                        <p>
+                            Посты
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                 </li>
             </ul>
