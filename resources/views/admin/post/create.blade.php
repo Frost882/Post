@@ -217,12 +217,11 @@
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->
-
-
                                             <textarea id="summernote" name='content'>{{old('content')}}</textarea>
                                             @error('content')
                                             <div class="text-danger">Это поле необходимо заполнить</div>
                                             @enderror
+
 
                                         <!-- File input -->
                                                 <div class="card-body">
@@ -238,6 +237,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @error('preview_image')
+                                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                                    @enderror
                                                     <div class="form-group">
                                                         <label for="exampleInputFile">Добавить главное изображение</label>
                                                         <div class="input-group">
@@ -250,14 +252,32 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @error('main_image')
+                                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                                    @enderror
                                                 </div>
+
                                             <!-- /File input -->
                                                 <!-- /.card-body -->
+                                            <!-- Select -->
+                                            <div class="form-group">
+                                                <label>Выберите категорию</label>
+                                                <select name="category_id" class="form-control">
+                                                   @foreach($categories as $category)
+                                                    <option value="{{$category->id}}"
+                                                        {{$category->id == old('$category_id') ? 'selected': ''}}
+                                                    >{{$category->title}}</option>
+                                                    @endforeach
+
+                                                </select>
+                                            </div>
+                                            <!-- /Select -->
                                             <!-- Button -->
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-primary">Добавить</button>
                                             </div>
                                             <!-- /Button -->
+
                                         </form>
 
                                         <!-- Control Sidebar -->
@@ -313,5 +333,6 @@
                                             bsCustomFileInput.init();
                                         });
                                     </script>
+
 </body>
 </html>
