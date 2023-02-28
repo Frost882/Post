@@ -6,6 +6,7 @@
     <title>AdminLTE 3 | Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href={{asset('plugins/select2/css/select2.min.css')}}>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -272,6 +274,18 @@
                                                 </select>
                                             </div>
                                             <!-- /Select -->
+                                            <!-- Select Multiple -->
+                                            <div class="form-group" data-select2-id="30">
+                                                <label>Теги</label>
+                                                <div class="select2-purple" data-select2-id="29">
+                                                    <select class="select2 select2-hidden-accessible" name="tag_ids" multiple="" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;" data-select2-id="15" tabindex="-1" aria-hidden="true">
+                                                        @foreach($tags as $tag)
+                                                        <option  value = "{{$tag->id}}">{{$tag->title}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- /Select Multiple -->
                                             <!-- Button -->
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-primary">Добавить</button>
@@ -309,6 +323,7 @@
                                     <script src="{{asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
                                     <!-- daterangepicker -->
                                     <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
+                                    <script src={{asset('plugins/select2/js/select2.full.min.js')}}></script>
                                     <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
                                     <!-- Tempusdominus Bootstrap 4 -->
                                     <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
@@ -334,5 +349,11 @@
                                         });
                                     </script>
 
+                                    <script>
+                                        $(function () {
+                                            //Initialize Select2 Elements
+                                            $('.select2').select2()
+                                            })
+                                    </script>
 </body>
 </html>
