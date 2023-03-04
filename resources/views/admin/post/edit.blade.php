@@ -6,6 +6,7 @@
     <title>AdminLTE 3 | Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href={{asset('plugins/select2/css/select2.min.css')}}>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
@@ -202,15 +203,15 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-lg-3 col-6">
+                    <div>
                 <!-- Main row -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="{{route ('admin.post.update', $post->id)}}" method="POST">
+                        <form action="{{route ('admin.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <div class="form-group">
+                                <div class="form-group w-25">
                                     <input type="text" class="form-control"name="title" placeholder="Название постов"
                                     value="{{$post->title}}">
                                     @error('title')
@@ -220,15 +221,84 @@
                             </div>
                             <!-- /.card-body -->
 
+                            <!-- content -->
+                            <textarea id="summernote" name='content'>{{$post->content}}</textarea>
+                            @error('content')
+                            <div class="text-danger">Это поле необходимо заполнить</div>
+                            @enderror
+
+                            <!-- /.content -->
+
+                            <!-- File input -->
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="w-25"><img src="{{asset('storage/' . $post->preview_image)}}" alt="preview_image" class="w-50">
+                                    </div>
+                                    <label for="exampleInputFile">Добавить превью</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" name="preview_image">
+                                            <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">Загрузка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @error('preview_image')
+                                <div class="text-danger">Это поле необходимо заполнить</div>
+                                @enderror
+                                <div class="form-group">
+                                    <div class="w-25"><img src="{{asset('storage/' . $post->main_image)}}" alt="main_image" class="w-50">
+                                    </div>
+                                    <label for="exampleInputFile">Добавить главное изображение</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+
+                                            <input type="file" class="custom-file-input" name="main_image">
+                                            <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">Загрузка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @error('main_image')
+                                <div class="text-danger">Это поле необходимо заполнить</div>
+                                @enderror
+                            </div>
+
+                            <!-- Select -->
+                            <div class="form-group">
+                                <label>Выберите категорию</label>
+                                <select name="category_id" class="form-control">
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}"
+                                            {{$category->id == $post->category_id ? 'selected': ''}}
+                                        >{{$category->title}}</option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+                            <!-- /Select -->
+                            <!-- Select Multiple -->
+                            <div class="form-group" data-select2-id="30">
+                                <label>Теги</label>
+                                <div class="select2-purple" data-select2-id="29">
+                                    <select class="select2" name="tag_ids" multiple="multiple" data-placeholder="Тэги"
+                                            data-dropdown-css-class="select2-purple" style="width: 100%;" data-select2-id="15" tabindex="-1" aria-hidden="true">
+                                        @foreach($tags as $tag)
+                                            <option {{is_array($post->tags->pluck('id')->toArray()) && in_array($tag->id, $post->tags->pluck('id')->toArray()) ? 'select' :''}} value = "{{$tag->id}}"> {{$tag->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /Select Multiple -->
+
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Обновить</button>
                             </div>
                         </form>
-
-
-
-
-
 
                         <!-- Control Sidebar -->
                         <aside class="control-sidebar control-sidebar-dark">
@@ -238,39 +308,58 @@
                 </div>
                 <!-- ./wrapper -->
 
-                <!-- jQuery -->
-                <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-                <!-- jQuery UI 1.11.4 -->
-                <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-                <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-                <script>
-                    $.widget.bridge('uibutton', $.ui.button)
-                </script>
-                <!-- Bootstrap 4 -->
-                <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-                <!-- ChartJS -->
-                <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script>
-                <!-- Sparkline -->
-                <script src="{{asset('plugins/sparklines/sparkline.js')}}"></script>
-                <!-- JQVMap -->
-                <script src="{{asset('plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-                <script src="{{asset('plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
-                <!-- jQuery Knob Chart -->
-                <script src="{{asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
-                <!-- daterangepicker -->
-                <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
-                <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
-                <!-- Tempusdominus Bootstrap 4 -->
-                <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-                <!-- Summernote -->
-                <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
-                <!-- overlayScrollbars -->
-                <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
-                <!-- AdminLTE App -->
-                <script src="{{asset('dist/js/adminlte.js')}}"></script>
-                <!-- AdminLTE for demo purposes -->
-                <script src="{{asset('dist/js/demo.js')}}"></script>
-                <!-- AdminLTE  demo (This is only for demo purposes) -->
-                <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+                    <!-- jQuery -->
+                    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+                    <!-- jQuery UI 1.11.4 -->
+                    <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+                    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+                    <script>
+                        $.widget.bridge('uibutton', $.ui.button)
+                    </script>
+                    <!-- Bootstrap 4 -->
+                    <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+                    <!-- ChartJS -->
+                    <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script>
+                    <!-- Sparkline -->
+                    <script src="{{asset('plugins/sparklines/sparkline.js')}}"></script>
+                    <!-- JQVMap -->
+                    <script src="{{asset('plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+                    <script src="{{asset('plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+                    <!-- jQuery Knob Chart -->
+                    <script src="{{asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+                    <!-- daterangepicker -->
+                    <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
+                    <script src={{asset('plugins/select2/js/select2.full.min.js')}}></script>
+                    <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
+                    <!-- Tempusdominus Bootstrap 4 -->
+                    <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+                    <!-- Summernote -->
+                    <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+                    <!-- overlayScrollbars -->
+                    <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+                    <!-- AdminLTE App -->
+                    <script src="{{asset('dist/js/adminlte.js')}}"></script>
+                    <!-- AdminLTE for demo purposes -->
+                    <script src="{{asset('dist/js/demo.js')}}"></script>
+                    <!-- AdminLTE  demo (This is only for demo purposes) -->
+                    <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+                    <script src="{{asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
+                    <script>
+                        $(document).ready(function() {
+                            $('#summernote').summernote();
+                        });
+                    </script>
+                    <script>
+                        $(function () {
+                            bsCustomFileInput.init();
+                        });
+                    </script>
+
+                    <script>
+                        $(function () {
+                            //Initialize Select2 Elements
+                            $('.select2').select2()
+                        })
+                    </script>
 </body>
 </html>
