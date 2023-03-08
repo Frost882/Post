@@ -215,7 +215,7 @@
                                     <input type="text" class="form-control"name="title" placeholder="Название постов"
                                     value="{{$post->title}}">
                                     @error('title')
-                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                    <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
                             <!-- content -->
                             <textarea id="summernote" name='content'>{{$post->content}}</textarea>
                             @error('content')
-                            <div class="text-danger">Это поле необходимо заполнить</div>
+                            <div class="text-danger">{{ $message }}</div>
                             @enderror
 
                             <!-- /.content -->
@@ -246,7 +246,7 @@
                                     </div>
                                 </div>
                                 @error('preview_image')
-                                <div class="text-danger">Это поле необходимо заполнить</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                                 <div class="form-group">
                                     <div class="w-25"><img src="{{asset('storage/' . $post->main_image)}}" alt="main_image" class="w-50">
@@ -256,7 +256,7 @@
                                         <div class="custom-file">
 
                                             <input type="file" class="custom-file-input" name="main_image">
-                                            <label class="custom-file-label" for="exampleInputFile">Выберите изображение</label>
+                                            <label class="custom-file-label">Выберите изображение</label>
                                         </div>
                                         <div class="input-group-append">
                                             <span class="input-group-text">Загрузка</span>
@@ -264,7 +264,7 @@
                                     </div>
                                 </div>
                                 @error('main_image')
-                                <div class="text-danger">Это поле необходимо заполнить</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
 
