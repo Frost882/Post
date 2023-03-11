@@ -51,6 +51,14 @@
                 </li>
                 <li class="nav-item">
                 </li>
+                <li class="nav-item menu-open">
+                    <a href="{{route('user.index')}}" class="nav-link active">
+                        <i class="fas fa-tags"></i>
+                        <p>
+                            Пользователи
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
