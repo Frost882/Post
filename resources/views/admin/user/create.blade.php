@@ -212,19 +212,19 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control"name="name" placeholder="Название пользователя">
                                     @error('name')
-                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                    <div class="text-danger">{{$message}}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control"name="email" placeholder="email пользователя">
                                     @error('email')
-                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                    <div class="text-danger">{{$message}}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control"name="password" placeholder="Пароль">
                                     @error('password')
-                                    <div class="text-danger">Это поле необходимо заполнить</div>
+                                    <div class="text-danger">{{$message}}</div>
                                     @enderror
                                 </div>
                             </div>
