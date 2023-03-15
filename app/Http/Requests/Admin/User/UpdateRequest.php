@@ -35,8 +35,7 @@ class UpdateRequest extends FormRequest
             'name.string' => 'Данные должны соответствовать строчнуму типу',
             'email.required' => 'Это поле необходимо для заполнения',
             'email.string' => 'Данные должны соответствовать строчнуму типу',
-            'email.email' => 'Ваша почта должна соответствовать формату user@mail.ru',
-            'email.unique' => 'Пользователь с таким email уже существует',
+
         ];
     }
 }
